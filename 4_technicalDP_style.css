@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eae6df;
+  display: flex;
+  margin: 0;
+}
+
+nav {
+  background-color: #c2ccc5;
+  border-right: 2px solid #777;
+  height: 100vh;
+  min-width: 300px;
+}
+
+nav header {
+  padding: 15px;
+}
+
+nav a {
+  border-top: 1px solid #777;
+  color: #000;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* ratio 16x9 */
+  height: 0;
+  overflow: hidden;
+  width: 75%;
+  height: auto;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+}
+
+/* ratio 4x3 */
+.embed-container.ratio4x3 {
+  padding-bottom: 75%;
+}
+
+section {
+  padding: 20px;
+  line-height: 1.5;
+}
+
+header {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+pre {
+  padding: 14px;
+  background-color: #ddd;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+  nav {
+    border-right: none;
+    border-bottom: 2px solid #777;
+    height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+  }
+  main {
+    height: auto;
+    overflow: none;
+    width: 100%;
+  }
+}
